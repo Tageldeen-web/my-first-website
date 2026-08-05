@@ -5,6 +5,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 40px;
+    min-height: 100vh;
 }
 
 h1 {
@@ -46,3 +47,36 @@ button {
 button:hover {
     background: orange;
 }
+
+.hero {
+      min-height: 100vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    gap: 60px;
+    padding: 40px;
+}
+.hero-text {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 450px;
+}
+
+
+    
