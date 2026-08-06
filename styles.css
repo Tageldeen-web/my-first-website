@@ -10,7 +10,10 @@ body {
 
 h1 {
     color: gold;
-    font-size: 60px;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -49,21 +52,26 @@ button:hover {
 }
 
 .hero {
-      min-height: 100vh;
+      min-height: 80vh;
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex start;
 
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: -30px;
 
     gap: 60px;
     padding: 40px;
 }
 .hero-text {
     flex: 1;
+    text-align: left;
 }
+.hero-text p {
+    margin-bottom: 30px;
+    }
 
 .hero-image {
     flex: 1;
@@ -80,3 +88,73 @@ button:hover {
 
 
     
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}
+
+.logo {
+    color: gold;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+
+    gap: 30px;
+}
+
+.nav-links a {
+    display: inline-block;
+    text-decoration: none;
+    color: gold;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    color: orange;
+    transform: scale(1.15);
+}
+
+.rashguard-container {
+    position: relative;
+    width: 450px;
+    height: 550px;
+    perspective: 1000px;
+}
+
+.rashguard-container img {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    backface-visibility: hidden;
+    transition: transform 0.8s ease;
+}
+
+.front {
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.rashguard-container:hover .front {
+    transform: rotateY(180deg);
+}
+
+.rashguard-container:hover .back {
+    transform: rotateY(360deg);
+}
